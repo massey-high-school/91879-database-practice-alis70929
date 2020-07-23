@@ -14,7 +14,6 @@ body {
     grid-template-rows: auto;
     grid-template-areas: 
         "banner"
-        "nav"
         "main"
         "footer";
         grid-gap: 4px;
@@ -36,7 +35,7 @@ body {
 
 /* logo, banner and footer background are the same */
 .logo, .banner, .footer {
-    background-color: #888;  /* dark grey */
+    background-color: #8B4513;  /* saddle brown */
 }
 
 /* Set font on dark areas to white */
@@ -56,16 +55,11 @@ body {
     grid-area: banner;
 }
 
-.nav {
-    grid-area: nav;
-    background-color: #DDD;  /* silver */
-    font-size: 150%;
-    text-align: center;
-}
+
 
 .main {
     grid-area: main;
-    background-color: #EEE;  /* very pale grey */
+    background-color: #EEE0CB;  /* Champagne(Brown) */
     border: solid 1px #CCC;
 }
 
