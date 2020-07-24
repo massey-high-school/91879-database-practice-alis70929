@@ -30,7 +30,7 @@
         <!-- logo image linking to home page goes here -->
         <a href="index.php">
             <div class="box logo"  title="Logo - Click here to go to the Home Page">
-            <img class="img-circle" src="images/gen_logo.png" width="150" height="150" alt="generic logo" />
+            <h1>Home</h1>
             
             </div>    <!-- / logo -->
         </a>
@@ -40,7 +40,15 @@
 
        <div class="box side"> 
         
-           <h1>Sidebar</h1>
+           <h2>Search | <a class = "side" href = "showall.php">Show all</a></h2>
+           
+           <i>Type part of tutle or author name if desired</i>
+           
+           <hr />
+           Title Search<br />
+           Author Search<br />
+           Genre Search<br />
+           Rating Search<br />
            
            
         </div>
