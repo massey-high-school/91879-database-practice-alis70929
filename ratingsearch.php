@@ -7,15 +7,15 @@ $amount = test_input(mysqli_real_escape_string($dbconnect, $_POST['amount']));
 $stars = test_input(mysqli_real_escape_string($dbconnect, $_POST['stars']));
 if($amount == "exactly")
 {
-    $find_sql = "SELECT * FROM `91879_book_reviews` WHERE `Rating` = $stars LIMIT 0 , 30";
+    $find_sql = "SELECT * FROM `2020_L1_Prac_ShaAli` WHERE `Rating` = $stars LIMIT 0 , 30";
 }
 else if($amount == "less")
 {
-    $find_sql = "SELECT * FROM `91879_book_reviews` WHERE `Rating` <= $stars LIMIT 0 , 30";
+    $find_sql = "SELECT * FROM `2020_L1_Prac_ShaAli` WHERE `Rating` <= $stars LIMIT 0 , 30";
 }
 else
 {
-     $find_sql = "SELECT * FROM `91879_book_reviews` WHERE `Rating` >= $stars LIMIT 0 , 30";
+     $find_sql = "SELECT * FROM `2020_L1_Prac_ShaAli` WHERE `Rating` >= $stars LIMIT 0 , 30";
 }
 
 $find_query = mysqli_query($dbconnect, $find_sql);

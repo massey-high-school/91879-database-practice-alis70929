@@ -6,7 +6,7 @@ if (isset($_POST['find_title']))
 $title = test_input(mysqli_real_escape_string($dbconnect, $_POST['title']));
     
 $find_sql = "SELECT *
-FROM `91879_book_reviews` WHERE `Title` LIKE '%$title%' LIMIT 0 , 30";
+FROM `2020_L1_Prac_ShaAli` WHERE `Title` LIKE '%$title%' LIMIT 0 , 30";
 $find_query = mysqli_query($dbconnect, $find_sql);
 $find_rs = mysqli_fetch_assoc($find_query);
 $count = mysqli_num_rows($find_query);

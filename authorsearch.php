@@ -6,7 +6,7 @@ if (isset($_POST['find_author']))
 $author = test_input(mysqli_real_escape_string($dbconnect, $_POST['author']));
     
 $find_sql = "SELECT *
-FROM `91879_book_reviews` WHERE `author` LIKE '%$author%' LIMIT 0 , 30";
+FROM `2020_L1_Prac_ShaAli` WHERE `author` LIKE '%$author%' LIMIT 0 , 30";
 $find_query = mysqli_query($dbconnect, $find_sql);
 $find_rs = mysqli_fetch_assoc($find_query);
 $count = mysqli_num_rows($find_query);
