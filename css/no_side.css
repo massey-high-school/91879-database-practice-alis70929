@@ -117,11 +117,26 @@ a:hover{color: #000;}    /* Black*/
     font-weight: bold;
 }
 
+/* Results formatting */
 .results {
-    background-color: #f4ebe1;
+    background-color: #f4ebe1;/* Whitish Beige */
     border-radius: 10px;
-    border: 1px solid #000;
+    border: 1px solid #000;/* Black */
     padding: 5px;
+}
+
+/* error box formatting */
+.error{
+    background-color: #ffe0ed;/* light pink */
+    border: 2px solid #8a1737;/* Maroonny Red */
+    color: #8a1737;
+    border-radius: 5px;
+    padding:20px;
+}
+/* search box formatting */
+
+.search{
+    width:200px;
 }
 
 
