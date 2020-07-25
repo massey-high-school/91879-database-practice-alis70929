@@ -1,7 +1,7 @@
 <?php 
 include "topbit.php";
 
-$showall_sql = "SELECT * FROM `91879_book_reviews` ORDER BY `91879_book_reviews`.`Title` ASC
+$showall_sql = "SELECT * FROM `2020_L1_Prac_ShaAli` ORDER BY `2020_L1_Prac_ShaAli`.`Title` ASC
 LIMIT 0 , 30
 ";
 $showall_query = mysqli_query($dbconnect, $showall_sql);
