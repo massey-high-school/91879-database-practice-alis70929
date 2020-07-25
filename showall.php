@@ -6,7 +6,7 @@ LIMIT 0 , 30
 ";
 $showall_query = mysqli_query($dbconnect, $showall_sql);
 $showall_rs = mysqli_fetch_assoc($showall_query);
-$count = mysqli_num_rows($showall_rs);
+$count = mysqli_num_rows($showall_query);
 ?>
        
         <div class="box main">
@@ -14,21 +14,58 @@ $count = mysqli_num_rows($showall_rs);
             <h2>All Items</h2>
             <!-- Results go here -->
             
-            <div class = "results">
+           <?php 
+            // Check if there are any results,
             
-                <p >Title:<span class = "sub-heading">Title Holder</span></p>
-                <p >Author:<span class = "sub-heading">Author Holder</span></p>
-                <p >Genre:<span class = "sub-heading">Genre Holder</span></p>
-                <p >Rating:<span class = "sub-heading">Rating Holder</span></p>
-                <p ><span class = "sub-heading">Review / Response</span></p>
+            // No results then display error
+            if ($count < 1)
+            {
+                ?>
+                <div class = "error"> Sorry!, No results match your searh, please try again</div>
+                <?php
+                  
+            }// end count if
+            
+            // If there are results display them
+            else
+            {
+                do
+                {
+                    ?>
+                    <div class = "results">
+                        <p >Title:<span class = "sub_heading"><?php echo $showall_rs['Title']; ?></span></p>
+                        <p >Author:<span class = "sub_heading"><?php echo $showall_rs['Author']; ?></span></p>
+                        <p >Genre:<span class = "sub_heading"><?php echo $showall_rs['Genre']; ?></span></p>
+                        <p >Rating:<span class = "sub_heading">
+                            
+                            <?php 
+                            for($x = 0; $x < $showall_rs['Rating']; $x++)
+                            {
+                                echo "&#9733;";
+                            }
+                            ?>
+                            
+                            </span></p>
+                        <p ><span class = "sub_heading">Review / Response</span></p>
+
+                        <p>
+
+                            <?php echo $showall_rs['Review']; ?>
+
+                        </p>
+
+                    </div><!-- end results -->
+                    <br /> <!-- To make a gap between each result box -->
+                    <?php
+                   
+                    
+                }// end do
+                while($showall_rs = mysqli_fetch_assoc($showall_query));
                 
-                <p>
                 
-                    Review Holder
-                
-                </p>
-                
-            </div>
+            }// end else
+            
+            ?>
             
         </div>    <!-- / main -->
 <?php 

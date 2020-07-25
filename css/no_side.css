@@ -117,6 +117,13 @@ a:hover{color: #000;}    /* Black*/
     font-weight: bold;
 }
 
+.results {
+    background-color: #f4ebe1;
+    border-radius: 10px;
+    border: 1px solid #000;
+    padding: 5px;
+}
+
 
 
 
