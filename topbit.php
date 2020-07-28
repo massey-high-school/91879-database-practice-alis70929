@@ -29,6 +29,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato%7cUbuntu" rel="stylesheet"> 
     
     <!-- Edit the name of your style sheet - 'foo' is not a valid name!! -->
+    <link rel="stylesheet" href="css/font-awesome.min.css"> 
     <link rel="stylesheet" href="css/no_side.css"> 
     
 </head>
@@ -65,7 +66,7 @@
            
            <input class = "search" type = "text" name = "title" size = "40" value = "" required placeholder = "Title..."/>
             
-            <input class = "submit" type = "submit" name = "find_title" value = "Search" />
+            <input class = "submit" type = "submit" name = "find_title" value = "$#xf002;" />
            </form>
            
            
@@ -79,11 +80,8 @@
            
            <input class = "search" type = "text" name = "author" size = "40" value = "" required placeholder = "Author..."/>
             
-            <input class = "submit" type = "submit" name = "find_author" value = "Search" />
+            <input class = "submit" type = "submit" name = "find_author" value = "$#xf002;" />
            </form>
-           
-           
-           
            
            <!-- End of Author Search -->
            <hr />
@@ -93,14 +91,29 @@
            
            <select name = "genre" required>
                <option value = "" disabled selected>Genre...</option>
-               <option value = "Sci Fi">Science Fiction</option>
-               <option value = "Humour">Comdey</option>
-               <option value = "Historical Fiction">Historical Fiction</option>
-               <option value = "Non Fiction">Non Fiction</option>
+               
+              <?php 
+               $genre_sql = "SELECT DISTINCT `Genre` FROM `2020_L1_Prac_ShaAli` ORDER BY `2020_L1_Prac_ShaAli`.`Genre` ASC LIMIT 0 , 30";
+               $genre_query = mysqli_query($dbconnect, $genre_sql); ;
+               $genre_rs = mysqli_fetch_assoc($genre_query) ;
+               
+               do{
+                   
+               ?>
+               
+               <option value = "<?php echo $genre_rs['Genre']; ?>"><?php echo $genre_rs['Genre']; ?></option>
+               
+               <?php
+               }// end of genre retrival
+               
+               while($genre_rs =mysqli_fetch_assoc($genre_query));
+               
+
+               ?>
                
             </select>
             
-            <input class = "submit" type = "submit" name = "find_genre" value = "Search" />
+            <input class = "submit" type = "submit" name = "find_genre" value = "$#xf002;" />
            </form>
            
            
@@ -127,7 +140,7 @@
                
             </select>
             
-            <input class = "submit" type = "submit" name = "find_rating" value = "Search" />
+            <input class = "submit" type = "submit" name = "find_rating" value = "$#xf002;" />
            </form>
            
            
