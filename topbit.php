@@ -66,7 +66,7 @@
            
            <input class = "search" type = "text" name = "title" size = "40" value = "" required placeholder = "Title..."/>
             
-            <input class = "submit" type = "submit" name = "find_title" value = "$#xf002;" />
+            <input class = "submit" type = "submit" name = "find_title" value = "&#xf002;" />
            </form>
            
            
@@ -80,7 +80,7 @@
            
            <input class = "search" type = "text" name = "author" size = "40" value = "" required placeholder = "Author..."/>
             
-            <input class = "submit" type = "submit" name = "find_author" value = "$#xf002;" />
+            <input class = "submit" type = "submit" name = "find_author" value = "&#xf002;" />
            </form>
            
            <!-- End of Author Search -->
@@ -113,7 +113,7 @@
                
             </select>
             
-            <input class = "submit" type = "submit" name = "find_genre" value = "$#xf002;" />
+            <input class = "submit" type = "submit" name = "find_genre" value = "&#xf002;" />
            </form>
            
            
@@ -140,7 +140,7 @@
                
             </select>
             
-            <input class = "submit" type = "submit" name = "find_rating" value = "$#xf002;" />
+            <input class = "submit" type = "submit" name = "find_rating" value = "&#xf002;" />
            </form>
            
            
