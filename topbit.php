@@ -30,7 +30,7 @@
     
     <!-- Edit the name of your style sheet - 'foo' is not a valid name!! -->
     <link rel="stylesheet" href="css/font-awesome.min.css"> 
-    <link rel="stylesheet" href="css/no_side.css"> 
+    <link rel="stylesheet" href="css/book-style.css"> 
     
 </head>
     
@@ -73,7 +73,7 @@
            
            
            <!-- End of Title Search -->
-           <hr />
+           
             <!-- Author Search -->
            
            <form method = "post" action = "authorsearch.php" enctype="multipart/form-data">
@@ -84,6 +84,8 @@
            </form>
            
            <!-- End of Author Search -->
+           <hr />
+           <i>Use the dropdown menus to search by genre or rating </i>
            <hr />
             <!-- Genre Search -->
            
@@ -120,7 +122,6 @@
            
            
            <!-- End of Genre Search -->
-           <hr />
            <!-- Ratings Search -->
            
            <form method = "post" action = "ratingsearch.php" enctype="multipart/form-data">
@@ -129,7 +130,7 @@
                <option value ="more">At Least...</option>
                <option value ="less">At Most...</option>
             </select>
-           <select name = "stars" required>
+           <select class = "halfwidth" name = "stars" required>
                
                <option value = "1">&#9733;</option>
                <option value = "2">&#9733;&#9733;</option>
@@ -147,7 +148,7 @@
            
            
            <!-- End of Ratings Search -->
-           <hr />
+          
            
            
            
